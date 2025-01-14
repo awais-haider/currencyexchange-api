@@ -173,6 +173,9 @@ To improve the readability and structure of the UML class diagram section in you
 
 This format uses tables to clearly present the fields and methods of each class, making it easier to read and understand.
 
+## OpenOPI (Swagger)
+Added support for swagger to document the API.
+http://127.0.0.1:8080/swagger-ui/index.html
 
 ## Bonus Activities:
 •	Create build scripts using Gradle to: 
