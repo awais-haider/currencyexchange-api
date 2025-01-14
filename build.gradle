@@ -51,9 +51,9 @@ tasks.jacocoTestReport {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "your_project_key"
-        property "sonar.organization", "your_organization"
+        property "sonar.projectKey", "currencyexchange-api"
+        property "sonar.organization", "awais-haider"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.login", "your_sonar_token"
+        property "sonar.login", "3526d7b0d82add5f935a2c435d2ecdb3cd36b6c7"
     }
 }
