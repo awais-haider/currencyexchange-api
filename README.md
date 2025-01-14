@@ -12,7 +12,7 @@ Implemented authentication for the exposed endpoints
 
 ## Prerequisites
 - Java 17 or higher
-- Gradle 7.0 or higher
+- Gradle 8.x or higher
 
 ## Setup
 1. Clone the repository:
