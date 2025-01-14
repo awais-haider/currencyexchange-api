@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: currenyexchange-api
+
+application:
+    rest:
+      currency-exchange:
+        api-key: c33b9eb0379672a3925c22db
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
