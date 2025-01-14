@@ -80,90 +80,98 @@ Response:
 
 
 
+To improve the readability and structure of the UML class diagram section in your `README.md`, you can use Markdown tables to represent the classes and their relationships. Here is an example of how you can format it:
 
+```markdown
 ## UML Classes
 
-+-----------------------------+
-|      CalculationController  |
-+-----------------------------+
-| - discountService: DiscountService |
-| - exchangeService: ExchangeService |
-+-----------------------------+
-| + calculatePayableAmount(bill: Bill): Mono<ResponseEntity<CalculatedDiscountResponse>> |
-+-----------------------------+
+### CalculationController
+| Field | Type | Description |
+|-------|------|-------------|
+| discountService | DiscountService | - |
+| exchangeService | ExchangeService | - |
 
-+-----------------------------+
-|      DiscountService        |
-+-----------------------------+
-| + calculateDiscount(bill: Bill): double |
-+-----------------------------+
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| calculatePayableAmount(bill: Bill) | Mono<ResponseEntity<CalculatedDiscountResponse>> | - |
 
-+-----------------------------+
-|      ExchangeService        |
-+-----------------------------+
-| + getExchangeRates(baseCurrency: String): Mono<Map<String, Double>> |
-| + convertCurrency(amount: double, originalCurrency: String, targetCurrency: String): Mono<Double> |
-+-----------------------------+
+### DiscountService
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| calculateDiscount(bill: Bill) | double | - |
 
-+-----------------------------+
-|      DiscountServiceImpl    |
-+-----------------------------+
-| + calculateDiscount(bill: Bill): double |
-+-----------------------------+
+### ExchangeService
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| getExchangeRates(baseCurrency: String) | Mono<Map<String, Double>> | - |
+| convertCurrency(amount: double, originalCurrency: String, targetCurrency: String) | Mono<Double> | - |
 
-+-----------------------------+
-|      ExchangeServiceImpl    |
-+-----------------------------+
-| - webClient: WebClient      |
-| - currencyApiKey: String    |
-+-----------------------------+
-| + getExchangeRates(baseCurrency: String): Mono<Map<String, Double>> |
-| + convertCurrency(amount: double, originalCurrency: String, targetCurrency: String): Mono<Double> |
-+-----------------------------+
+### DiscountServiceImpl
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| calculateDiscount(bill: Bill) | double | - |
 
-+-----------------------------+
-|      Bill                   |
-+-----------------------------+
-| - user: User                |
-| - items: List<Item>         |
-| - totalAmount: double       |
-| - originalCurrency: String  |
-| - targetCurrency: String    |
-+-----------------------------+
-| + user(): User              |
-| + items(): List<Item>       |
-| + totalAmount(): double     |
-| + originalCurrency(): String|
-| + targetCurrency(): String  |
-+-----------------------------+
+### ExchangeServiceImpl
+| Field | Type | Description |
+|-------|------|-------------|
+| webClient | WebClient | - |
+| currencyApiKey | String | - |
 
-+-----------------------------+
-|      User                   |
-+-----------------------------+
-| - type: String              |
-| - tenure: int               |
-+-----------------------------+
-| + type(): String            |
-| + tenure(): int             |
-+-----------------------------+
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| getExchangeRates(baseCurrency: String) | Mono<Map<String, Double>> | - |
+| convertCurrency(amount: double, originalCurrency: String, targetCurrency: String) | Mono<Double> | - |
 
-+-----------------------------+
-|      Item                   |
-+-----------------------------+
-| - category: String          |
-| - price: double             |
-+-----------------------------+
-| + category(): String        |
-| + price(): double           |
-+-----------------------------+
+### Bill
+| Field | Type | Description |
+|-------|------|-------------|
+| user | User | - |
+| items | List<Item> | - |
+| totalAmount | double | - |
+| originalCurrency | String | - |
+| targetCurrency | String | - |
 
-+-----------------------------+
-|      CalculatedDiscountResponse |
-+-----------------------------+
-| - finalPayableAmount: double |
-+-----------------------------+
-| + finalPayableAmount(): double |
-+-----------------------------+
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| user() | User | - |
+| items() | List<Item> | - |
+| totalAmount() | double | - |
+| originalCurrency() | String | - |
+| targetCurrency() | String | - |
+
+### User
+| Field | Type | Description |
+|-------|------|-------------|
+| type | String | - |
+| tenure | int | - |
+
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| type() | String | - |
+| tenure() | int | - |
+
+### Item
+| Field | Type | Description |
+|-------|------|-------------|
+| category | String | - |
+| price | double | - |
+
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| category() | String | - |
+| price() | double | - |
+
+### CalculatedDiscountResponse
+| Field | Type | Description |
+|-------|------|-------------|
+| finalPayableAmount | double | - |
+
+| Method | Return Type | Description |
+|--------|-------------|-------------|
+| finalPayableAmount() | double | - |
+```
+
+This format uses tables to clearly present the fields and methods of each class, making it easier to read and understand.
 
 
 ## Bonus Activities:
