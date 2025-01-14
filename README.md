@@ -86,89 +86,89 @@ To improve the readability and structure of the UML class diagram section in you
 ## UML Classes
 
 ### CalculationController
-| Field | Type | Description |
-|-------|------|-------------|
-| discountService | DiscountService | - |
-| exchangeService | ExchangeService | - |
+| Field | Type | Visibility | Description |
+|-------|------|------------|-------------|
+| discountService | DiscountService | public | - |
+| exchangeService | ExchangeService | public | - |
 
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| calculatePayableAmount(bill: Bill) | Mono<ResponseEntity<CalculatedDiscountResponse>> | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| calculatePayableAmount(bill: Bill) | Mono<ResponseEntity<CalculatedDiscountResponse>> | public | - |
 
 ### DiscountService
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| calculateDiscount(bill: Bill) | double | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| calculateDiscount(bill: Bill) | double | public | - |
 
 ### ExchangeService
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| getExchangeRates(baseCurrency: String) | Mono<Map<String, Double>> | - |
-| convertCurrency(amount: double, originalCurrency: String, targetCurrency: String) | Mono<Double> | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| getExchangeRates(baseCurrency: String) | Mono<Map<String, Double>> | public | - |
+| convertCurrency(amount: double, originalCurrency: String, targetCurrency: String) | Mono<Double> | public | - |
 
 ### DiscountServiceImpl
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| calculateDiscount(bill: Bill) | double | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| calculateDiscount(bill: Bill) | double | public | - |
 
 ### ExchangeServiceImpl
-| Field | Type | Description |
-|-------|------|-------------|
-| webClient | WebClient | - |
-| currencyApiKey | String | - |
+| Field | Type | Visibility | Description |
+|-------|------|------------|-------------|
+| webClient | WebClient | public | - |
+| currencyApiKey | String | public | - |
 
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| getExchangeRates(baseCurrency: String) | Mono<Map<String, Double>> | - |
-| convertCurrency(amount: double, originalCurrency: String, targetCurrency: String) | Mono<Double> | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| getExchangeRates(baseCurrency: String) | Mono<Map<String, Double>> | public | - |
+| convertCurrency(amount: double, originalCurrency: String, targetCurrency: String) | Mono<Double> | public | - |
 
 ### Bill
-| Field | Type | Description |
-|-------|------|-------------|
-| user | User | - |
-| items | List<Item> | - |
-| totalAmount | double | - |
-| originalCurrency | String | - |
-| targetCurrency | String | - |
+| Field | Type | Visibility | Description |
+|-------|------|------------|-------------|
+| user | User | public | - |
+| items | List<Item> | public | - |
+| totalAmount | double | public | - |
+| originalCurrency | String | public | - |
+| targetCurrency | String | public | - |
 
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| user() | User | - |
-| items() | List<Item> | - |
-| totalAmount() | double | - |
-| originalCurrency() | String | - |
-| targetCurrency() | String | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| user() | User | public | - |
+| items() | List<Item> | public | - |
+| totalAmount() | double | public | - |
+| originalCurrency() | String | public | - |
+| targetCurrency() | String | public | - |
 
 ### User
-| Field | Type | Description |
-|-------|------|-------------|
-| type | String | - |
-| tenure | int | - |
+| Field | Type | Visibility | Description |
+|-------|------|------------|-------------|
+| type | String | public | - |
+| tenure | int | public | - |
 
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| type() | String | - |
-| tenure() | int | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| type() | String | public | - |
+| tenure() | int | public | - |
 
 ### Item
-| Field | Type | Description |
-|-------|------|-------------|
-| category | String | - |
-| price | double | - |
+| Field | Type | Visibility | Description |
+|-------|------|------------|-------------|
+| category | String | public | - |
+| price | double | public | - |
 
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| category() | String | - |
-| price() | double | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| category() | String | public | - |
+| price() | double | public | - |
 
 ### CalculatedDiscountResponse
-| Field | Type | Description |
-|-------|------|-------------|
-| finalPayableAmount | double | - |
+| Field | Type | Visibility | Description |
+|-------|------|------------|-------------|
+| finalPayableAmount | double | public | - |
 
-| Method | Return Type | Description |
-|--------|-------------|-------------|
-| finalPayableAmount() | double | - |
+| Method | Return Type | Visibility | Description |
+|--------|-------------|------------|-------------|
+| finalPayableAmount() | double | public | - |
 ```
 
 This format uses tables to clearly present the fields and methods of each class, making it easier to read and understand.
